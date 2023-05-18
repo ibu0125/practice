@@ -10,25 +10,8 @@ import (
 
 func main() {
 	println("start")
-
-	// http.HandleFunc("/", mainHandler)
 	http.HandleFunc("/login", screen)
 	http.ListenAndServe(":8080", nil)
-}
-
-func mainHandler(w http.ResponseWriter, r *http.Request) {
-	// doc, err := goquery.NewDocument("https://ibu0125.github.io/web/home.html")
-	// if err != nil {
-	// 	panic("失敗")
-	// }
-
-	// title := doc.Find("title").Text()
-	// url := doc.Find("a")
-
-	// fmt.Println("Title: ", title)
-	// url.Each(func(i int, s *goquery.Selection) {
-	// 	fmt.Println("URL: ", s.AttrOr("href", ""))
-	// })
 }
 
 func screen(w http.ResponseWriter, r *http.Request) {
