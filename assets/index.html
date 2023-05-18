@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+</head>
+
+<body>
+    <form method="post" action="/login">
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url">
+        <button type="submit">send</button>
+    </form>
+
+    <h3>result</h3>
+    <p>Title: {{.Title}}</p>
+    <ul style="list-style: none;">
+        <li>
+            <p>URLs</p>
+        </li>
+        {{range .URLs}}
+        <li>{{.}}</li>
+        {{end}}
+    </ul>
+</body>
+
+</html>
